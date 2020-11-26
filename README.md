@@ -9,7 +9,7 @@ A mini chat application that utilizes CometChat and UIkit
 * [Material Design](https://material.io/develop/android/)
 * [CometChat](https://www.cometchat.com)
 * [CometChat UIKit](https://github.com/cometchat-pro/android-chat-ui-kit)
-* [Matomo tracker](https://github.com/matomo-org/matomo-sdk-android/wiki/Getting-started)
+* [Matomo Analytics](https://github.com/matomo-org/matomo-sdk-android/wiki/Getting-started)
 
 
 ## Author

@@ -1,0 +1,3 @@
+rootProject.name = "ChitChat"
+include ':app'
+include ':uikit'

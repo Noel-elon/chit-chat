@@ -1,12 +1,12 @@
 package com.example.chitchat
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.cometchat.pro.core.AppSettings
 import com.cometchat.pro.core.CometChat
 import com.cometchat.pro.exceptions.CometChatException
@@ -14,7 +14,11 @@ import com.cometchat.pro.models.User
 import com.example.chitchat.utils.APP_ID
 import com.example.chitchat.utils.AUTH_KEY
 import com.example.chitchat.utils.REGION
+import org.matomo.sdk.Tracker
+import org.matomo.sdk.extra.MatomoApplication
+import org.matomo.sdk.extra.TrackHelper
 import screen.unified.CometChatUnified
+
 
 class MainActivity : AppCompatActivity() {
     lateinit var nameTv: TextView
@@ -27,6 +31,12 @@ class MainActivity : AppCompatActivity() {
         nameTv = findViewById(R.id.Name)
         uidTv = findViewById(R.id.Uid)
         loginButton = findViewById(R.id.login_button)
+
+
+        val tracker: Tracker = (application as MatomoApplication).tracker
+        TrackHelper.track().screen("/your_activity").title("Title").with(tracker)
+
+        TrackHelper.track().download().with(tracker);
 
         initCometChat()
 
